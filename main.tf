@@ -1,6 +1,4 @@
- 
-
-module "pointer_sg" {
+ module "pointer_sg" {
   source = "terraform-aws-modules/security-group/aws"
 
   name        = "Pointer-SG"
@@ -37,6 +35,7 @@ module "ec2_instance" {
   monitoring             = true
   vpc_security_group_ids = [module.pointer_sg.security_group_id]
   subnet_id              = var.subnet_id
+  user_data              = file("./dependencias.sh")
 
   tags = {
     Terraform = "true"
