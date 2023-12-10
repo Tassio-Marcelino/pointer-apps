@@ -6,3 +6,4 @@ git clone https://github.com/Tassio-Marcelino/pointer-apps.git /tmp/pointer-apps
 
 cd /tmp/pointer-apps/
 ansible-playbook pointer-playbook.yml
+
